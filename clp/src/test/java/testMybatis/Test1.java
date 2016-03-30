@@ -73,5 +73,6 @@ public class Test1 {
 		List<user> all3 = userService.getAll3();
 		String jsonString = JSON.toJSONString(all3);
 		System.out.println(jsonString);
+		
 	}
 }

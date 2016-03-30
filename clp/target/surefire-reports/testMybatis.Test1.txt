@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: testMybatis.Test1
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.981 sec <<< FAILURE!
-test4(testMybatis.Test1)  Time elapsed: 0.072 sec  <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.07 sec <<< FAILURE!
+test4(testMybatis.Test1)  Time elapsed: 0.08 sec  <<< ERROR!
 org.springframework.dao.DuplicateKeyException: 
 ### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '4' for key 'PRIMARY'
 ### The error may involve clp.dao.userMapper.addUser-Inline

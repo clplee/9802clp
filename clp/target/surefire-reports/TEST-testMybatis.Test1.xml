@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="1.799" errors="1" skipped="0" tests="5" name="testMybatis.Test1">
+<testsuite failures="0" time="1.913" errors="1" skipped="0" tests="5" name="testMybatis.Test1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_79\jre\bin"/>
@@ -26,9 +26,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="F:\train\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6868118182482984058.tmp"/>
+    <property name="classworlds.conf" value="F:\train\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2053197765041421674.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_79\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.7.0_79\bin;C:\Program Files\Java\jdk1.7.0_79\jre\bin;E:\apache-maven-3.2.1/bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_79\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.7.0_79\bin;C:\Program Files\Java\jdk1.7.0_79\jre\bin;E:\apache-maven-3.2.1/bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,9 +61,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="1.593" classname="testMybatis.Test1" name="test2"/>
-  <testcase time="0.005" classname="testMybatis.Test1" name="test3"/>
-  <testcase time="0.072" classname="testMybatis.Test1" name="test4">
+  <testcase time="1.702" classname="testMybatis.Test1" name="test2"/>
+  <testcase time="0.006" classname="testMybatis.Test1" name="test3"/>
+  <testcase time="0.08" classname="testMybatis.Test1" name="test4">
     <error message="
 ### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry &apos;4&apos; for key &apos;PRIMARY&apos;
 ### The error may involve clp.dao.userMapper.addUser-Inline
@@ -156,12 +156,12 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:408)
 	... 41 more
 </error>
-    <system-err>三月 29, 2016 3:49:32 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+    <system-err>三月 30, 2016 11:17:49 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
 信息: Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
-三月 29, 2016 3:49:32 下午 org.springframework.jdbc.support.SQLErrorCodesFactory &lt;init&gt;
+三月 30, 2016 11:17:49 上午 org.springframework.jdbc.support.SQLErrorCodesFactory &lt;init&gt;
 信息: SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
 </system-err>
   </testcase>
-  <testcase time="0.125" classname="testMybatis.Test1" name="test5"/>
+  <testcase time="0.121" classname="testMybatis.Test1" name="test5"/>
   <testcase time="0.004" classname="testMybatis.Test1" name="testMybatis"/>
 </testsuite>
