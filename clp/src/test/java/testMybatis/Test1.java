@@ -63,7 +63,6 @@ public class Test1 {
 	@Test
 	public void test4(){
 		user user=new user();
-		user.setId(4);
 		user.setName("lalala");
 		userService.addUser(user);
 	}

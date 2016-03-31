@@ -21,6 +21,13 @@
 		$('#detail_'+id).show('slow');
 		
 	}
+	
+	function add(){
+		$(".dfinput").val('');
+		$(".tips_").html("&nbsp;   &nbsp; &nbsp; &nbsp;");
+		$('#add').show('slow');
+		
+	}
 </script>
 </head>
 <body>
@@ -38,28 +45,15 @@
 					<td>${user.id }</td>
 					<td>${user.name }</td>
 					<td><a href="/clp/userController/delete.do?id=${user.id }">删除</a>
-						<a href="javascript:void(0);" onclick="show(${user.id})">添加</a>
+						<a href="javascript:void(0);" onclick="show(${user.id})">修改</a>
 						</td>
 				</tr>
 				<div id="detail_${user.id }" class="tail">
 					<div class="tailinfo1">
-						<br> &nbsp; &nbsp; &nbsp; &nbsp; 请输入ID： <br /> &nbsp; &nbsp;
-						&nbsp; &nbsp;
-						<textarea rows="50" cols="10" maxlength="100" placeholder="请输入ID"
-							id="i${user.id}" style="height: 50px; width: 410px;"
-							class="dfinput"></textarea>
-
-						&nbsp; &nbsp; &nbsp; &nbsp;
-						<div class='tips_' style='color: red;'>&nbsp; &nbsp; &nbsp;
-							&nbsp;</div>
-					</div>
-					<div class="tailinfo1">
 						<br> &nbsp; &nbsp; &nbsp; &nbsp; 请输入姓名： <br /> &nbsp; &nbsp;
 						&nbsp; &nbsp;
-						<textarea rows="50" cols="10" maxlength="100" placeholder="请输入姓名"
-							id="t${user.id}" style="height: 150px; width: 410px;"
-							class="dfinput"></textarea>
-
+						
+						<input type="text" value="${user.name }" id="t${user.id}"/>
 						&nbsp; &nbsp; &nbsp; &nbsp;
 						<div class="tailbtn">
 							<input name="" type="button" value="确定"
@@ -72,7 +66,33 @@
 		</tbody>
 	</table>
 	
+	
+	<button onclick="add()">添加</button>
+	<div id="add" class="tail">
+					<div class="tailinfo1">
+						<br> &nbsp; &nbsp; &nbsp; &nbsp; 请输入姓名： <br /> &nbsp; &nbsp;
+						&nbsp; &nbsp;
+						
+						<input type="text" value="${user.name }" id="n"/>
+						&nbsp; &nbsp; &nbsp; &nbsp;
+						<div class="tailbtn">
+							<input name="" type="button" value="确定"
+								onclick="javascript:sure1();" />&nbsp; <input
+								name="" type="button" class="cancel" value="取消"
+								onclick="$('.tail').fadeOut(100);" />
+						</div>
+					</div>
 <script type="text/javascript">
+function sure1(){
+    alert($("#n").val().trim());
+	$('.tail').fadeOut(100);
+	$(".tips_").html("&nbsp;   &nbsp; &nbsp; &nbsp;");
+		$.post('/clp/userController/add.do',{'name':$("#n").val().trim()}, 
+		function(data){
+        window.location.href = "${pageContext.request.contextPath}/userController/getall";}
+     );
+	
+}
 	function sure(id){
 	$(".tips_").html("&nbsp;   &nbsp; &nbsp; &nbsp;");
 	    deleteCompanyaccount(id);
@@ -86,16 +106,14 @@
 	else {
 		$('.tail').fadeOut(100);
 		$(".tips_").html("&nbsp;   &nbsp; &nbsp; &nbsp;");
-				 $.post('/clp/userController/add.do',{'complaintId':id,'id':$("#i"+id).val().trim(),'name':$("#t"+id).val().trim()}, 
+				 $.post('/clp/userController/update.do',{'Id':id,'name':$("#t"+id).val().trim()}, 
 			function(data){
-	     	var message = eval( "(" + data + ")" );
-			if (message.msg=="4000") {
-	        window.location.href = "${pageContext.request.contextPath}/clp/userController/getall";
-         	} 
+	        window.location.href = "${pageContext.request.contextPath}/userController/getall";
 	     });
 		
 	}
 	}
+	
 	</script>
 </body>
 </html>
